@@ -8,13 +8,13 @@ def fibonacci(n,memo={}):
         return n
     memo[n]=fibonacci(n-1,memo)+fibonacci(n-2,memo)
     return memo[n]
-resultado=fibonacci(50)
+resultado=fibonacci(150)
 print("__________________________________________________________")
-print("Fibonacci de 50 es:", resultado)
+print("Fibonacci de 150 es:", resultado)
 print("__________________________________________________________")
 #Actividad 2
 from decimal import Decimal,getcontext
-getcontext().prec=50
+getcontext().prec=38
 numero1=Decimal('1.123456789123456789')
 numero2=Decimal('2.987654321987654321')
 resultado= numero1*numero2
@@ -23,7 +23,7 @@ print("__________________________________________________________")
 #Acitividad 3
 import re
 
-cadena = "ESTE ES un ejemplo DE USO AVANZADO de CADENAS y expresiones REGULARES"
+cadena = "ESTE ES un CODIGO DE USO ejemplo de CADENAS y expresiones  MAYUSCULAS y minusculas o bien, REGULARES"
 patron = r'\b[A-Z]{2,}\b'
 palabrasMayusculas = re.findall(patron, cadena)
 print("Palabras en mayusculas:", palabrasMayusculas)
